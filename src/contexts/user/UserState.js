@@ -14,7 +14,7 @@ const UserState = (props) => {
     
     // Get user list
     const getUsers = async () => {
-        const res =  await axios.get('https://reqres.in/api/users?page=2')
+        const res =  await axios.get('https://reqres.in/api/users')
         dispatch({
             type: 'GET_USERS',
             payload: res.data.data
