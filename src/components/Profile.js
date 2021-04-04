@@ -1,19 +1,14 @@
-import React, { useEffect } from "react";
-import {useContext} from "react";
+import React, { useContext } from "react";
 import UserContext from "../contexts/user/UserContext";
 
-const Profile = (props) => {
+const Profile = () => {
 
-    const { getProfile } = useContext(UserContext)
-
-    useEffect(() => {
-        getProfile(props.id);
-    })
+    const { selectedUser } = useContext(UserContext)
 
     return (
-        <div>
-            Profile
-        </div>
+       <>
+        {selectedUser ? (<div></div>): (<h1>User not selected</h1>)}
+       </>
     )
 }
 

@@ -8,6 +8,7 @@ function App() {
   return (
     <UserState>
       <UserList />
+      <Profile />
     </UserState>
   );
 }
